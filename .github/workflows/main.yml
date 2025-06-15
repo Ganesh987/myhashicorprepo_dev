@@ -31,6 +31,6 @@ jobs:
           #echo 'For bash'
           APPSECRET="${{ env.APPSECRET }}"
           echo "Stored Output: $APPSECRET"
-          #echo 'for windows'         
+          #echo 'for windows'.         
           #$APPSECRET = "${{ env.APPSECRET }}"
           #echo "Stored Output: $APPSECRET"
