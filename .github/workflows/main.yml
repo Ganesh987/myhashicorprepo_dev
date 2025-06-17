@@ -18,12 +18,12 @@ jobs:
           url: https://vault-cluster-public-vault-a9973be8.e25832b5.z1.hashicorp.cloud:8200
           path: jwt-dev-actions
           role: auth.jwt.dev_role
-          method : jwt
+          method: jwt
           exportToken: true
           exportEnv: true
           namespace: admin
           secrets: |
-            MyDevSecrets/data/repo:myhashicorprepo_dev/workflow:myhashicorprepo_dev_workflow1 secretkey | APPSECRET ;
+            MyDevSecrets/data/repo:myhashicorprepo_dev/workflow:myhashicorprepo_dev_workflow1 ** | APPSECRET ;
       - name: Step following 'Import Secrets'
         run: |
           echo '${{ toJson(steps.import-secrets.outputs) }}' > secrets.json
